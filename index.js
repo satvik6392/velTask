@@ -1,12 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
 
 app.use(express.json());
+app.use(cors());
 
 // MongoDB connection
 mongoose.connect("mongodb+srv://ssdb001:Shark_002@nodeexpressprojects.98wpo.mongodb.net/")
